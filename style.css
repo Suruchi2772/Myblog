@@ -2,13 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* iss property ki value border-box set krne se mtlb hai hum kisi element ko jitni bhi width de to vo width uske padding+border width + content ke barabar ho 
+    border-box: width = border-width*2 + padding*2 +content-width
+    content-box : width =  only content width 
+    =>total width occupied by element = padding*2 + border*2 + content-width */
 }
+
 header{
     height: 200px;
     display: flex;
+    /* yeh property use krne se hum flex ke child ke upar flex ki property lga sakte hai  */
     justify-content: center;
+    /* iss hum flex ke items ko horizontally align kr skte hai  */
     align-items: center;
+    /* isse hum flex ke items ko vertical-align kr skte hai  */
     flex-direction: column;
+    /* iss property se hum flex items ki direction matlab vo horizontally ek ke baad ek aaye ya vertically ek ke niche ek aaye ye decide kr skte hai  */
     font-family: "Raleway", sans-serif;
 }
 
@@ -23,9 +32,35 @@ h3{
     font-weight: 200;
 }
 
-.author-name{
+.author-name, .travel-tag{
     background-color: black;
     color: white;
     display: inline-block;
+    /* display me humare pass 3 property hoti hai inline block and inline-block  */
     padding: 8px;
+}
+
+.outer{
+    /* width: 100vw; */
+    display: flex;
+    flex-direction: row;
+    margin: 10px 30px 30px 30px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+
+}
+
+.post-section{
+    width: 63%;
+    border: 1px solid rgb(4, 255, 0);
+
+}
+
+.details{
+    width: 33%;
+    border: 1px solid red;
+}
+
+.post{
+    width: 100%;
 }
